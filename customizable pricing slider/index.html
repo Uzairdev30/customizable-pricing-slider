@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Pricing Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Choose Your Ideal Price</h1>
+        <p>Slide to find the plan that fits your needs perfectly</p>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider-info">
+            <div class="price-label" id="price-label-start">$10</div>
+            <div class="plan-tier" id="plan-tier">Basic Plan</div>
+        </div>
+
+        <input type="range" id="price-slider" min="10" max="100" value="50" step="1">
+
+    </div>
+
+    <div class="feature-description">
+        <p id="feature-text">Access basic features</p>
+    </div>
+
+    <!-- Add My by UzairDev at the very bottom -->
+    <div class="footer-text">
+        <p>My by UzairDev</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

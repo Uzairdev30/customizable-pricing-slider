@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #f2f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Header Styling */
+.header h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.header p {
+    font-size: 18px;
+    color: #7f8c8d;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: translateY(15px);
+    margin-left: 20px;
+    animation: slideIn 0.6s ease-out;
+}
+
+#price-slider {
+    width: 100%;
+    height: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #FF6F61 0%, #FFD700 100%);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#price-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #FF6F61;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+#price-slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #FF6F61;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+#price-slider:focus::-webkit-slider-thumb {
+    background-color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Dynamic Pricing Info */
+.slider-info .price-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.slider-info .plan-tier {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #95a5a6;
+}
+
+/* Feature Description */
+.feature-description {
+    margin-top: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #34495e;
+    /* animation: fadeInUp 1s ease-out;
+    opacity: 0; */
+}
+
+#feature-text {
+    font-size: 18px;
+    color: #7f8c8d;
+    font-weight: 400;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Footer Text */
+.footer-text {
+    margin-top: 50px; 
+    font-size: 14px;
+    color: #7f8c8d;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.footer-text p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* Hover Effects for Slider Thumb */
+#price-slider::-webkit-slider-thumb:hover {
+    background: #FF6F61;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+}
+
+#price-slider::-moz-range-thumb:hover {
+    background: #FF6F61;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slider-gradient {
+    0% {
+        background: linear-gradient(to right, #FF6F61 0%, #FFD700 100%);
+    }
+    50% {
+        background: linear-gradient(to right, #FF6F61 50%, #FFD700 50%);
+    }
+    100% {
+        background: linear-gradient(to right, #FFD700 100%, #FF6F61 0%);
+    }
+}
+
+/* Adding some subtle transitions for smoother feel */
+.container:hover {
+    transform: scale(1.05);
+}
